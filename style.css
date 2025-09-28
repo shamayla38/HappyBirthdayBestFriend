@@ -25,3 +25,9 @@
     text-align: center;
   }
   
+  /* Style audio player */
+audio {
+  margin-top: 15px;
+  width: 100%;
+  max-width: 300px; /* keeps it tidy */
+}
