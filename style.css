@@ -1,26 +1,45 @@
+/* General reset */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  height: 100%;
+}
+
 /* Collage container */
 .collage {
   position: relative;
   width: 100%;
   height: 100vh;
-  background: #fce4ec;
+  background: #fce4ec; /* soft pink */
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
 }
 
-/* Title + subtitle */
+/* Main large photo (center) */
+.main-photo {
+  position: absolute;
+  width: 500px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+  z-index: 1;
+}
+
+/* Text block overlay */
 .text-block {
+  position: absolute;
   text-align: center;
   z-index: 2;
-  background: rgba(255, 255, 255, 0.6); /* soft overlay */
+  background: rgba(255, 255, 255, 0.7); /* translucent background */
   padding: 20px 40px;
   border-radius: 12px;
 }
 
 .text-block h1 {
-  font-size: 2.8em;
+  font-size: 2.5em;
   font-family: 'Georgia', serif;
   color: #333;
   margin-bottom: 10px;
@@ -30,44 +49,44 @@
   font-size: 1.2em;
   color: #444;
   font-style: italic;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 /* Music Player */
 audio {
-  margin-top: 10px;
   width: 250px;
+  margin-top: 10px;
 }
 
-/* Photos in collage */
-.photo {
+/* Side photos */
+.side-photo {
   position: absolute;
   width: 180px;
   height: auto;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  z-index: 1;
   object-fit: cover;
 }
 
-/* Positioning each photo */
-.photo1 {
-  top: 10%;
-  left: 10%;
-}
+/* Position photo2 (top-left) */
 .photo2 {
-  bottom: 15%;
-  left: 20%;
-}
-.photo3 {
-  top: 20%;
-  right: 10%;
+  top: 10%;
+  left: 5%;
 }
 
-/* Navigation */
+/* Position photo3 (bottom-right) */
+.photo3 {
+  bottom: 10%;
+  right: 5%;
+}
+
+/* Navigation bar */
 nav {
   text-align: center;
   margin: 20px 0;
 }
+
 nav a {
   margin: 0 15px;
   text-decoration: none;
@@ -77,6 +96,7 @@ nav a {
   padding: 8px 16px;
   border-radius: 8px;
 }
+
 nav a:hover {
   background: #ff3b2e;
 }
